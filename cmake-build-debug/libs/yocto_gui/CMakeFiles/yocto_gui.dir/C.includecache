@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/glad.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+glad.h
+C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/glad.h
+windows.h
+-
+winapifamily.h
+-
+dlfcn.h
+-
+
+C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/glad.h
+khrplatform.h
+C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/khrplatform.h
+
+C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="yocto_colorgrade"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\exts\;CMake Files\exts\glfw\;CMake Files\exts\glfw\src\;CMake Files\libs\;CMake Files\libs\yocto\;CMake Files\libs\yocto_colorgrade\;CMake Files\libs\yocto_gui\;CMake Files\apps\;CMake Files\apps\ycolorgrade\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/exts/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/exts/glfw/src"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 glfw"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/exts/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/exts/glfw/src"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 glfw/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\exts\glfw\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 yocto"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto/fast">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 yocto/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto_colorgrade">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto_colorgrade.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto_colorgrade"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 yocto_colorgrade"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto_colorgrade/fast">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto_colorgrade.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto_colorgrade"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 yocto_colorgrade/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_colorgrade\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto_gui">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto_gui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto_gui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DIMGUI_IMPL_OPENGL_LOADER_GLAD"/>
+					<Add option="-DYOCTO_OPENGL"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/."/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/./ext"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 yocto_gui"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yocto_gui/fast">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/yocto_gui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/libs/yocto_gui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DIMGUI_IMPL_OPENGL_LOADER_GLAD"/>
+					<Add option="-DYOCTO_OPENGL"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/."/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/./ext"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 yocto_gui/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\libs\yocto_gui\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ycolorgrade">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/ycolorgrade.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/bin/debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DYOCTO_OPENGL"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 ycolorgrade"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ycolorgrade/fast">
+				<Option output="C:/Users/simon/Desktop/01_image_out/out/bin/debug/ycolorgrade.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/simon/Desktop/01_image_out/out/bin/debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DYOCTO_OPENGL"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/libs"/>
+					<Add directory="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 ycolorgrade/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\simon\Desktop\01_image_out\out\cmake-build-debug\apps\ycolorgrade\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/apps/ycolorgrade/ycolorgrade.cpp">
+			<Option target="ycolorgrade"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/cmake-build-debug/exts/glfw/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/egl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/osmesa_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/wgl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/wgl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/win32_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/fast_float.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/json.hpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/stb_image.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/stb_image.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/stb_image_resize.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/stb_image_write.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/tinyexr.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/ext/tinyexr.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_bvh.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_bvh.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_cli.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_cli.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_color.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_geometry.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_image.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_image.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_math.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_mesh.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_mesh.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_modelio.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_modelio.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_noise.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_parallel.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_sampling.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_scene.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_scene.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_sceneio.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_sceneio.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_shading.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_shape.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_shape.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_trace.cpp">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/yocto_trace.h">
+			<Option target="yocto"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_colorgrade/yocto_colorgrade.cpp">
+			<Option target="yocto_colorgrade"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_colorgrade/yocto_colorgrade.h">
+			<Option target="yocto_colorgrade"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/glad.c">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/glad/glad.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_demo.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_draw.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_impl_glfw.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_impl_glfw.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_tables.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/ext/imgui/imgui_widgets.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_glview.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_glview.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_imgui.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_imgui.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_opengl.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_opengl.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_shade.cpp">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/yocto_shade.h">
+			<Option target="yocto_gui"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\exts\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\exts\glfw\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\exts\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\exts\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\exts\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/exts/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\exts\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\yocto\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_colorgrade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\yocto_colorgrade\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/libs/yocto_gui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\yocto_gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/apps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/01_image_out/out/apps/ycolorgrade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\ycolorgrade\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
