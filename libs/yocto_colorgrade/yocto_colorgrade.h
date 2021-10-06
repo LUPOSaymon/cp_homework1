@@ -46,7 +46,7 @@ struct grade_params {
   float exposure    = 0.0f;
   bool  filmic      = false;
   bool  srgb        = true;
-  bool gaussian_blur= false;
+  int blur_intensity = 0;
   bool anaglyph     = false;
   int distanceRightImage = 20;
   bool no_tone = false;
@@ -58,6 +58,7 @@ struct grade_params {
   int   mosaic     = 0;
   int   grid       = 0;
   float sigma      = 0.0f;
+  bool edge_detection = false;
 };
 
 // Grading functions

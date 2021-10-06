@@ -6,5 +6,5 @@
 .\bin\ycolorgrade --image tests\toa_heftiba_people.jpg --exposure -0.5 --contrast 0.75 --saturation 0 --output out\toa_heftiba_people_02.jpg
 .\bin\ycolorgrade --image tests\toa_heftiba_people.jpg --exposure -0.5 --contrast 0.6 --saturation 0.7 --tint-red 0.995 --tint-green 0.946 --tint-blue 0.829 --grain 0.3 --output out\toa_heftiba_people_03.jpg
 .\bin\ycolorgrade --image tests\toa_heftiba_people.jpg --mosaic 16 --grid 16 --output out\toa_heftiba_people_04.jpg
-.\bin\ycolorgrade --image tests\deer.jpeg --gaussian_blur --sigma 0.001  --no_tone --output out\deer.jpeg --interactive
+.\bin\ycolorgrade --image tests\deer.jpeg --blur_intensity 10 --sigma 5  --no_tone --output out\deerBlur.jpg
 

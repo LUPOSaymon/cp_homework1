@@ -100,8 +100,8 @@ void run_interactively(
         edited += draw_glcheckbox("no tone",params.no_tone);
       edited += draw_glcheckbox("filmic", params.filmic);
       edited += draw_glcheckbox("srgb", params.srgb);
-      edited += draw_glcheckbox("gaussian_blur",params.gaussian_blur);
       edited += draw_glcheckbox("anaglyph effect",params.anaglyph);
+      edited += draw_glcheckbox("edge detection",params.edge_detection);
       edited += draw_glcoloredit("tint", params.tint);
       edited += draw_glslider("contrast", params.contrast, 0, 1);
       edited += draw_glslider("saturation", params.saturation, 0, 1);
@@ -109,7 +109,8 @@ void run_interactively(
       edited += draw_glslider("grain", params.grain, 0, 1);
       edited += draw_glslider("mosaic", params.mosaic, 0, 64);
       edited += draw_glslider("grid", params.grid, 0, 64);
-      edited += draw_glslider("gaussian sigma",params.sigma,0.001f,1.0f);
+      edited += draw_glslider("blur intensity",params.blur_intensity,0,20);
+      edited += draw_glslider("sigma",params.sigma,0,6.0f);
 
 
       end_glheader();
@@ -149,10 +150,11 @@ void run(const vector<string>& args) {
   add_option(cli, "grain", params.grain, "Grain strength");
   add_option(cli, "mosaic", params.mosaic, "Mosaic size (pixels)");
   add_option(cli, "grid", params.grid, "Grid size (pixels)");
-  add_option(cli,"gaussian_blur",params.gaussian_blur,"Gaussian Blur Effect");
   add_option(cli,"sigma",params.sigma,"Sigma value for Gaussian Blur Effect");
   add_option(cli,"no_tone",params.no_tone,"If add tone or not");
   add_option(cli,"anaglyph",params.anaglyph,"The old Red/cyan 2D Effect :D");
+  add_option(cli,"blur_intensity",params.blur_intensity,"Intensity of Blur Effect(How many times I apply Blur effect?)");
+  add_option(cli, "edge_detection", params.edge_detection, "Edge Detection with Bilateral Filter");
 
   if (!parse_cli(cli, args, error)) print_fatal(error);
 

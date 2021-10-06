@@ -1,13 +1,17 @@
-# Yocto/Grade: Tiny Color Grading Utilities
+# Gaussian Blur (easy)
 
-Questo homework ha lo scopo principale di abituarci all'utilizzo degli strumenti
-di programmazione richiesti dal corso. In particolare, in questo homework
-implementeremo quattro funzionalità:
+Dalla definizione di [**Wikipedia**](https://en.wikipedia.org/wiki/Gaussian_blur), in Image 
+Processing, il Blur Gaussiano crea immagini sfocate attraverso l'uso delle 
+[**funzione Gaussiane**](https://en.wikipedia.org/wiki/Gaussian_function). E' un tipo di filtro
+molto usato per migliorare leggermente immagini a bassa qualità (tentando di unificare i 
+pixels) e nel migliorare l'accuratezza degli algoritmi di Border Detection.
 
-- carimento e salvataggio di immagini,
-- tonemapping di immagini,
-- color grading di immagini,
-- filtri di immagini.
+###L'algoritmo base
+Consiste nel selezionare un pixel, ottenere informazioni attorno a quel pixel selezionato, per
+poi fare una media pesata, in basa alla distanza dal pixel selezionato(si utilizzano quindi le
+Kernel Matrix).
+
+
 
 ## Framework
 
