@@ -57,6 +57,8 @@ yocto/yocto_color.h
 -
 yocto/yocto_sampling.h
 -
+iostream
+-
 
 C:/Users/simon/Desktop/01_image_out/out/libs/yocto_colorgrade/yocto_colorgrade.h
 yocto/yocto_image.h

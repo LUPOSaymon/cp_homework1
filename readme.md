@@ -3,14 +3,13 @@
 Dalla definizione di [**Wikipedia**](https://en.wikipedia.org/wiki/Gaussian_blur), in Image 
 Processing, il Blur Gaussiano crea immagini sfocate attraverso l'uso delle 
 [**funzione Gaussiane**](https://en.wikipedia.org/wiki/Gaussian_function). E' un tipo di filtro
-molto usato per migliorare leggermente immagini a bassa qualità (tentando di unificare i 
+molto usato per migliorare leggermente immagini con molto noise (tentando di unificare i 
 pixels) e nel migliorare l'accuratezza degli algoritmi di Border Detection.
 
 ###L'algoritmo base
-Consiste nel selezionare un pixel, ottenere informazioni attorno a quel pixel selezionato, per
-poi fare una media pesata, in basa alla distanza dal pixel selezionato(si utilizzano quindi le
-Kernel Matrix).
 
+nyc
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.agoda.com%2Fit-it%2Fcity%2Fnew-york-ny-us.html&psig=AOvVaw3Ps6GjE3YYzuEFdVaeehrF&ust=1633686540163000&source=images&cd=vfe&ved=0CAwQjhxqFwoTCPiC4-aCuPMCFQAAAAAdAAAAABAD
 
 
 ## Framework

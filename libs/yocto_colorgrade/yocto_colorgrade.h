@@ -48,6 +48,7 @@ struct grade_params {
   bool  srgb        = true;
   int blur_intensity = 0;
   bool anaglyph     = false;
+  bool grayAnaglyph = false;
   int distanceRightImage = 20;
   bool no_tone = false;
   vec3f tint       = vec3f{1, 1, 1};
@@ -59,6 +60,11 @@ struct grade_params {
   int   grid       = 0;
   float sigma      = 0.0f;
   bool edge_detection = false;
+  bool vhsEffect = false;
+    bool invertColor = false;
+    bool oilPainting = false;
+    bool borders = false;
+    float bordersSize = 100;
 };
 
 // Grading functions

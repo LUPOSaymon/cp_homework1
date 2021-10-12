@@ -59,7 +59,17 @@ namespace yocto {
 
     void anaglyph(color_image &image, int distance);
 
+    void grayAnaglyph(color_image &image, int distance);
+
     void edgeDetection(color_image& image);
+
+    void vhsEffect(color_image& image);
+
+    void invertColor(color_image &image);
+
+    void oilPainting(color_image &image);
+
+    void addBorders(color_image &image, float bordersSize);
 
     color_image grade_image(const color_image& image, const grade_params& params)
     {
@@ -85,6 +95,7 @@ namespace yocto {
                 contrast_(pixel, params.contrast);
                 vignette(graded, params.vignette, i, j);
                 filmGrain(pixel, params.grain, rng);
+
             }
         }
         gaussianBlur(graded, params.sigma, params.blur_intensity);
@@ -92,24 +103,177 @@ namespace yocto {
             anaglyph(graded, params.distanceRightImage);
         if (params.edge_detection)
             edgeDetection(graded);
-
+        if(params.grayAnaglyph)
+            grayAnaglyph(graded,params.distanceRightImage);
+        if(params.vhsEffect)
+            vhsEffect(graded);
+        if(params.invertColor)
+            invertColor(graded);
+        if(params.oilPainting)
+            oilPainting(graded);
+        if(params.borders)
+            addBorders(graded,params.bordersSize);
         return graded;
     }
-    void edgeDetection(color_image& image)
+
+    void addBorders(color_image &image, float bordersSize)
+    {
+        for (int y = 0; y < bordersSize; ++y)
+        {
+            for (int x = 0; x < image.width; ++x)
+            {
+                image[{x,y}].x = 0.0f;
+                image[{x,y}].y = 0.0f;
+                image[{x,y}].z = 0.0f;
+
+                image[{x,image.height - 1 - y}].x = 0.0f;
+                image[{x,image.height - 1 - y}].y = 0.0f;
+                image[{x,image.height - 1 - y}].z = 0.0f;
+            }
+        }
+
+        for (int y = 0; y < image.height; ++y)
+        {
+            for (int x = 0; x < bordersSize; ++x)
+            {
+                image[{x,y}].x = 0.0f;
+                image[{x,y}].y = 0.0f;
+                image[{x,y}].z = 0.0f;
+
+                image[{image.width - 1 - x,y}].x = 0.0f;
+                image[{image.width - 1 - x,y}].y = 0.0f;
+                image[{image.width - 1 - x,y}].z = 0.0f;
+            }
+        }
+    }
+    void oilPainting(color_image &image)
+    {
+        color_image finalImage = image;
+        int intensityLevel = 20;
+        int currentIntesity = 0;
+        gaussianBlur(image,1,2);
+        int indexMax = 0;
+        for (int y = 0; y < image.height; ++y)
+        {
+            for (int x = 0; x < image.width; ++x)
+            {
+                int intensityCount[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+                float averageR[] =  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+                float averageG[] =  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+                float averageB[] =  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+                float *r;
+                float *g;
+                float *b;
+
+                for (int i = -5; i < 6; ++i)
+                {
+                    for (int j = -5; j < 6; ++j)
+                    {
+                        if(j+x >= image.width || j +x <0 || i + y >= image.height || i + y < 0)
+                        {
+                            r = &image[{x,y}].x;
+                            g = &image[{x,y}].y;
+                            b = &image[{x,y}].z;
+                        }
+                        else
+                        {
+                            r = &image[{x+j,y+i}].x;
+                            g = &image[{x+j,y+i}].y;
+                            b = &image[{x+j,y+i}].z;
+                        }
+                        currentIntesity = ((*r+*g+*b)/3) * intensityLevel;
+                        intensityCount[currentIntesity]++;
+                        averageR[currentIntesity] += *r;
+                        averageG[currentIntesity] += *g;
+                        averageB[currentIntesity] += *b;
+
+                        if(intensityCount[currentIntesity] > intensityCount[indexMax])
+                            indexMax = currentIntesity;
+                    }
+                }
+                finalImage[{x,y}].x = averageR[indexMax]/ intensityCount[indexMax];
+                finalImage[{x,y}].y = averageG[indexMax]/ intensityCount[indexMax];
+                finalImage[{x,y}].z = averageB[indexMax]/ intensityCount[indexMax];
+            }
+        }
+        image = finalImage;
+    }
+    void invertColor(color_image &image)
     {
         for (int y = 0; y < image.height; ++y)
         {
             for (int x = 0; x < image.width; ++x)
             {
-                saturation(image[{x,y}],0);
+                float& r  = image[{x,y}].x;
+                float& g  = image[{x,y}].y;
+                float& b  = image[{x,y}].z;
+
+                r = 1 - image[{x,y}].x;
+                g = 1 - image[{x,y}].y;
+                b = 1 - image[{x,y}].z;
             }
         }
-        gaussianBlur(image,5,1);
-
     }
+    void vhsEffect(color_image& image)
+    {
+        auto rng = make_rng(11234);
+        float matrix[] = {0.155, 0.088, 0.177, 0.022, 0.088, 0.177, 0.022, 0.088, 0.177};
+        int matrixLength = sizeof(matrix)/sizeof(*matrix);
+        float str = 0.25;
+        //Creating Image with 4:3 aspect ratio (yeah, hold vibes :D)
+        image = resize_image(image,image.width,image.width/4*3);
+        for (int y = 0; y < image.height; ++y)
+        {
+            for (int x = 0; x < image.width; ++x)
+            {
+                saturation(image[{x,y}],str);
+                image[{x,y}].y = image[{x,y}].y/100 * 93;   //set green channel 93%
+            }
+        }
+        float sumKernel[3];
+        color_image tempImage = image;
+        for (int y = 0; y < image.height; ++y)
+        {
+            for (int x = 0; x < image.width; ++x)
+            {
+                sumKernel[0] = 0;
+                sumKernel[1] = 0;
+                sumKernel[2] = 0;
 
+                for (int i = 0; i < matrixLength; ++i)
+                {
+                    if(!(y -1 + (int)i/3 < 0 || y -1 + (int)y/3 >= image.height) &&
+                    !( x-1 + i%3 < 0 || x-1 + i%3 >= image.width))
+                    {
+                        sumKernel[0] += image[{(int) x-1 + i % 3, (int) y - 1 / 3}].x * matrix[i];
+                        sumKernel[1] += image[{(int) x-1 + i % 3, (int) y - 1  / 3}].y * matrix[i];
+                        sumKernel[2] += image[{(int) x-1 + i % 3, (int) y - 1 / 3}].z * matrix[i];
+                    }
+                    else
+                    {
+                        sumKernel[0] += image[{x,y}].x * matrix[i];
+                        sumKernel[1] += image[{x,y}].y * matrix[i];
+                        sumKernel[2] += image[{x,y}].z * matrix[i];
+
+                    }
+                }
+
+                tempImage[{x,y}].x = sumKernel[0];
+                tempImage[{x,y}].y = sumKernel[1];
+                tempImage[{x,y}].z = sumKernel[2];
+                tempImage[{x,y}] = tempImage[{x,y}]+ (rand1f(rng) - 0.5) * 0.15;
+            }
+        }
+        anaglyph(tempImage,3);
+        image = tempImage;
+    }
+    void edgeDetection(color_image& image)
+    {
+        
+    }
     void anaglyph(color_image &image, int distance)
     {
+        color_image finalImage = make_image(image.width - distance,image.height,false);
         float matrix[2][9] = {{1,0,0,0,0,0,0,0,0}, {0,0,0,0,1,0,0,0,1}};
         color_image rightImage = make_image(image.width - distance,image.height,false);
         for (int y = 0; y < image.height; ++y)
@@ -126,20 +290,50 @@ namespace yocto {
                 float& r1 = rightImage[{x,y}].x;
                 float& g1 = rightImage[{x,y}].y;
                 float& b1 = rightImage[{x,y}].z;
+                finalImage[{x,y}].x =   r*matrix[0][0] + g*matrix[0][1] + b*matrix[0][2] +
+                                        r1*matrix[1][0] + g1*matrix[1][1] + b1*matrix[1][2];
 
-                r =     r*matrix[0][0] + g*matrix[0][1] + b*matrix[0][2] +
-                        r1*matrix[1][0] + g1*matrix[1][1] + b1*matrix[1][2];
+                finalImage[{x,y}].y =   r*matrix[0][3] + g*matrix[0][4] + b*matrix[0][5] +
+                                        r1*matrix[1][3] + g1*matrix[1][4] + b1*matrix[1][5];
 
-                g =     r*matrix[0][3] + g*matrix[0][4] + b*matrix[0][5] +
-                        r1*matrix[1][3] + g1*matrix[1][4] + b1*matrix[1][5];
+                finalImage[{x,y}].z =   r*matrix[0][6] + g*matrix[0][7] + b*matrix[0][8] +
+                                        r1*matrix[1][6] + g1*matrix[1][7] + b1*matrix[1][8];
+            }
+        }
+        image = finalImage;
+    }
+    void grayAnaglyph(color_image &image, int distance)
+    {
+        float matrix[2][9] = {{0.299,0.587,0.114,0,0,0,0,0,0}, {0,0,0,0.299,0.587,0.114,0.299,0.587,0.114}};
+        color_image finalImage = make_image(image.width - distance,image.height,false);
+        color_image rightImage = make_image(image.width - distance,image.height,false);
+        for (int y = 0; y < image.height; ++y)
+            for (int x = 0; x < rightImage.width; ++x)
+                rightImage[{x,y}] = image[{x + distance,y}];
+        for (int y = 0; y < rightImage.height; ++y)
+        {
+            for (int x = 0; x < rightImage.width; ++x)
+            {
+                float& r = image[{x,y}].x;
+                float& g = image[{x,y}].y;
+                float& b = image[{x,y}].z;
 
-                b =     r*matrix[0][6] + g*matrix[0][7] + b*matrix[0][8] +
-                        r1*matrix[1][6] + g1*matrix[1][7] + b1*matrix[1][8];
+                float& r1 = rightImage[{x,y}].x;
+                float& g1 = rightImage[{x,y}].y;
+                float& b1 = rightImage[{x,y}].z;
+
+                finalImage[{x,y}].x =   r*matrix[0][0] + g*matrix[0][1] + b*matrix[0][2] +
+                                        r1*matrix[1][0] + g1*matrix[1][1] + b1*matrix[1][2];
+
+                finalImage[{x,y}].y =   r*matrix[0][3] + g*matrix[0][4] + b*matrix[0][5] +
+                                        r1*matrix[1][3] + g1*matrix[1][4] + b1*matrix[1][5];
+
+                finalImage[{x,y}].z =   r*matrix[0][6] + g*matrix[0][7] + b*matrix[0][8] +
+                                        r1*matrix[1][6] + g1*matrix[1][7] + b1*matrix[1][8];
 
             }
         }
-
-
+        image = finalImage;
     }
     void horizontalGaussianBlur(color_image &image, float sigma);
     void verticalGaussianBlur(color_image &image, float sigma);

@@ -101,7 +101,12 @@ void run_interactively(
       edited += draw_glcheckbox("filmic", params.filmic);
       edited += draw_glcheckbox("srgb", params.srgb);
       edited += draw_glcheckbox("anaglyph effect",params.anaglyph);
+      edited += draw_glcheckbox("gray anaglyph effect",params.grayAnaglyph);
+      edited += draw_glcheckbox("vhs effect",params.vhsEffect);
       edited += draw_glcheckbox("edge detection",params.edge_detection);
+      edited += draw_glcheckbox("invert color", params.invertColor);
+      edited += draw_glcheckbox("oil painting",params.oilPainting);
+      edited += draw_glcheckbox("add borders",params.borders);
       edited += draw_glcoloredit("tint", params.tint);
       edited += draw_glslider("contrast", params.contrast, 0, 1);
       edited += draw_glslider("saturation", params.saturation, 0, 1);
@@ -155,7 +160,11 @@ void run(const vector<string>& args) {
   add_option(cli,"anaglyph",params.anaglyph,"The old Red/cyan 2D Effect :D");
   add_option(cli,"blur_intensity",params.blur_intensity,"Intensity of Blur Effect(How many times I apply Blur effect?)");
   add_option(cli, "edge_detection", params.edge_detection, "Edge Detection with Bilateral Filter");
-
+  add_option(cli,"gray_anaglyph",params.grayAnaglyph,"Gray Anaglyph Effect");
+  add_option(cli,"vhs_effect",params.vhsEffect,"Hold vibes: vhs effect");
+  add_option(cli,"invert_color",params.invertColor,"Invert Color of the Image");
+  add_option(cli,"oil_painting",params.oilPainting,"Transform image to oil paiting");
+  add_option(cli,"borders",params.borders,"Add borders to image");
   if (!parse_cli(cli, args, error)) print_fatal(error);
 
   if (interactive) {
